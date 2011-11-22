@@ -31,10 +31,10 @@ License: Copyright 2011  Matthew Gargano  (email : mgargano@gmail.com)
 */
 
 
-add_action('admin_menu', 'admin_menu'); 
+add_action('admin_menu', 'wppt_admin_menu'); 
 add_action('admin_enqueue_scripts', 'load_wppt_admin');
 
-function admin_menu() {
+function wppt_admin_menu() {
   add_menu_page('WP Powertools Options', 'WP Powertools', 'administrator', "wppt_admin_page", "wppt_admin", plugin_dir_url(__FILE__)."/images/wpptIcon.png");
   }
 
