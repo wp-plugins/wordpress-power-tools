@@ -16,10 +16,8 @@ It currently just globally removes the grey admin bar for logged in users, which
 
 == Installation ==
 
-
 1. Unzip and upload resulting directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-
 
 == Frequently Asked Questions ==
 
