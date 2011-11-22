@@ -3,7 +3,7 @@
 Plugin Name: WordPress PowerTools
 Plugin URI: http://matgargano.com/WPPT
 Description: OK, I admit, there's not much power to these tools, but I wanted to get the ball rolling on a solution that handles the tedious things that I perform every time I install WordPress.
-Version: 0.1
+Version: 0.2
 Author: Mat Gargano
 Author URI: http://matgargano.com
 Graphics retrieved from iconfinder.com ; 
