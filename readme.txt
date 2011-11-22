@@ -4,7 +4,7 @@ Donate link: http://matgargano.com/donate
 Tags: powertools, power tools, admin bar, adminbar
 Requires at least: 2.7
 Tested up to: 3.2.1
-Stable tag: 0.1
+Stable tag: 0.2
 
 This is the first step in a long journey, my first release of tools that easily take care of non-sense dirty work on fresh Wordpress installs. 
 
