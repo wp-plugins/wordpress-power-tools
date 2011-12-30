@@ -1,34 +1,4 @@
-<?php
-/*
-Plugin Name: WordPress PowerTools
-Plugin URI: http://matgargano.com/WPPT
-Description: OK, I admit, there's not much power to these tools, but I wanted to get the ball rolling on a solution that handles the tedious things that I perform every time I install WordPress.
-Version: 0.2
-Author: Mat Gargano
-Author URI: http://matgargano.com
-Graphics retrieved from iconfinder.com ; 
-  WordPress PowerTools Admin Menu graphic (Yusuke Kamiyamane, http://p.yusukekamiyamane.com/)
-  WordPress PowerTools Admin Page graphic (Everaldo Coelho, http://www.everaldo.com/)  
-
-
-License: Copyright 2011  Matthew Gargano  (email : mgargano@gmail.com)
-
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as 
-    published by the Free Software Foundation.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-.
-
-.
-*/
+<?php/*Plugin Name: WordPress PowerToolsPlugin URI: http://matgargano.com/WPPTDescription: OK, I admit, there's not much power to these tools, but I wanted to get the ball rolling on a solution that handles the tedious things that I perform every time I install WordPress.Version: 0.3Author: Mat GarganoAuthor URI: http://matgargano.comGraphics retrieved from iconfinder.com ;   WordPress PowerTools Admin Menu graphic (Yusuke Kamiyamane, http://p.yusukekamiyamane.com/)  WordPress PowerTools Admin Page graphic (Everaldo Coelho, http://www.everaldo.com/)  License: Copyright 2011  Matthew Gargano  (email : mgargano@gmail.com)    This program is free software; you can redistribute it and/or modify    it under the terms of the GNU General Public License, version 2, as     published by the Free Software Foundation.    This program is distributed in the hope that it will be useful,    but WITHOUT ANY WARRANTY; without even the implied warranty of    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the    GNU General Public License for more details.    You should have received a copy of the GNU General Public License    along with this program; if not, write to the Free Software    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA..*/
 
 
 add_action('admin_menu', 'wppt_admin_menu'); 
@@ -59,7 +29,7 @@ $wpptOptions=get_option("wppt_options");
 if (!is_array($wpptOptions)){$wpptOptionsArray=unserialize($wpptOptions);}
 
 if ($wpptOptionsArray['hideBar']==1) {$hideBar=1;} else {}
-if ($wpptOptionsArray['hideBarAdmin']==1) {$hideBarAdmin=1;$outputMessage.="<br /><br /><span class=\"bold\">Note: You may need to reload to see the bar in the back end</span>";} else {}
+if ($wpptOptionsArray['hideBarAdmin']==1) {$hideBarAdmin=1;if($outputMessage<>""){$outputMessage.="<br /><br /><span class=\"bold\">Note: You may need to reload to see the bar in the back end</span>";}} else {}
 
   ?>                                                                                                                                   
   <div class="wrap"><div class="icon32 icon32-posts-post" id="icon-wppt"><br></div><h2>WordPress Powertools - Options Panel </h2></div>
