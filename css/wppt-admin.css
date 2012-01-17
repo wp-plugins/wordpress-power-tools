@@ -1,9 +1,41 @@
-#icon-wppt {background: url("../images/wppt.png") no-repeat scroll transparent}
+#icon-wppt {background: url("../images/wppt.png") no-repeat scroll 0 0 transparent;}
+.floatLeft{float:left;}
 label.hideAdmin {width:200px;float:left;}
 #wpptAdmin input[type=checkbox] {float:left;width:200px;}
-.clearboth {clear:both;}
+.clearBoth,.clearboth {clear:both;}
 .bold {font-weight:bold;}
-.wpptNotice {border: 1px solid #888888;margin-left: 20px;margin-top: 30px;margin-bottom:30px;padding: 5px 10px;width: 700px;border-radius:5px;background: #ffffff; /* Old browsers */background: #ffffff; /* Old browsers */background: -moz-linear-gradient(-45deg,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */background: -o-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */background: -ms-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */background: linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */min-height:100px;}
+.wpptNotice {border: 1px solid #888888;margin-left: 120px;margin-top: 30px;margin-bottom:30px;padding: 5px 10px;width: 400px;border-radius:5px;background: #ffffff; /* Old browsers */background: #ffffff; /* Old browsers */background: -moz-linear-gradient(-45deg,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */background: -o-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */background: -ms-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */background: linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */min-height:100px;}
 .wpptNotice h2 {font-size:18px;text-align:center;text-decoration:underline;}
 .wpptNotice p {font-size:13px;color:#000;}
-k#wpptAdmin {padding-top:30px;}
+#wpptAdmin {padding-top:30px;}
+.wpptNotice ul li {list-style-type:disc;margin-left:30px;padding-left:10px;}
+#wpptAdmin {padding-top:30px;}
+#wpptWordPressOptions,#wpptWordPressOptions table {font-size:11px;margin-top:20px;}
+#wpptWordPressOptions div#key h2 {font-size:12px;margin:3px 0 3px 0;padding:0;text-align:center;font-weight:bold;text-shadow:none;line-height:14px;}
+#wpptWordPressOptions div#key p {font-size:12px;margin:0 0 3px 0;padding:0;}
+#wpptWordPressOptions div#key {width:775px;padding:0 8px 3px 8px;margin:0 0 0 20px;}
+#wpptWordPressOptions div#key .wordpressOptionSpan {background:#E8EDFF;border:1px solid #ccc;}
+#wpptWordPressOptions div#key table tr td:first-child {text-align:center;text-decoration:underline;}
+#wpptWordPressOptions div#key table tr:first-child td{text-align:center;text-decoration:none;}
+#wpptWordPressOptions div#key .questionMarkP {font-size:16px;text-align:center;}
+div#wpptWordPressOptions div#key.floatLeft table#optionKey tbody tr td#questionMarkTd,div#wpptWordPressOptions div#key.floatLeft table#optionKey tbody tr td#xTd {text-align:center;}
+div#wpptWordPressOptions div#key.floatLeft table#optionKey tbody tr td#questionMarkTd p {font-size:16px;}
+#wpptWordPressOptions div#key table#optionKey  {border-collapse:collapse;margin-top:0;padding-top:0;background:#fefefe;margin-left:auto;margin-right:auto;margin-bottom:10px;}
+#hideDefaultOptions, #showDefaultOptions {margin-bottom:20px;margin-left:30px;}
+#wpptWordPressOptions table tr.defaultOptions, #wpptWordPressOptions table tr.defaultOptions td {background:#E8EDFF;}
+#wpptWordPressOptions table tr td {border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+#wpptWordPressOptions table tr.defaultOptions td {padding:3px;}
+#showDefaultOptions {display:none;}
+#wpptWordPressOptions table tr td.optVal, #wpptWordPressOptions table tr td.optName {vertical-align:top;padding-left:5px;padding-right:5px;}
+#wpptWordPressOptions table tr td.optVal pre {margin-top:0;}
+#optionKey td {border-top:1px solid #ccc;}
+#wpptWordPressOptions table tr td {border-left:1px solid #ccc;}
+span.theOptName {padding-left:10px;}
+#wpptWordPressOptions table tr td {padding-top:5px;}
+td.googleIt, td.deleteOpt {vertical-align:top;text-align:center;}
+td.googleIt {font-size:16px;padding-left:5px;padding-right:5px;text-align:center;}
+td.googleIt a {text-decoration:underline;} 
+td.googleIt a:hover {color:#FF0000;}
+tr#wpptOptionsHead td {font-weight:bold;white-space:nowrap;padding-left:5px;padding-right:5px;border-top:0px solid #000;}
+#wpptWordPressOptions table tr#wpptOptionsHead td {border-bottom:2px solid #000;border-right:1px solid #bbb;border-left:1px solid #bbb;}
+#wpptWordPressOptions table {border-collapse:collapse;}
