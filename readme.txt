@@ -4,7 +4,7 @@ Donate link: http://matgargano.com/donate
 Tags: powertools, power tools, toolbar, tool bar, adminbar, admin bar
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 1.0
+Stable tag: 1.1
 
 A backend-centric suite of tools designed to handle the non-sense grunt work on your WordPress installs.
 
@@ -31,7 +31,7 @@ Yes it does! When opting to hide the Toolbar for logged in users in the administ
 = What if I have a question or suggestion? = 
 Feel free to create a thread in the WordPress.org bbPress forum with the tag "wordpress-power-tools " or you can always catch me on Twitter, where my handle is @matgargano.
 
-= Does this plugin work with versions of PHP < 5.2 and WordPress < 3.2?
+= Does this plugin work with versions of PHP < 5.2 and WordPress < 3.2? =
 Sorry, as WordPress dropped support for PHP 5.2 in version 3.2, I too have made the decision to only support WordPress version 3.2 and higher in a PHP 5.2 and higher environment. You will be unable to activate the plugin in such an environment.   
 
 == Screenshots ==
@@ -40,6 +40,10 @@ Sorry, as WordPress dropped support for PHP 5.2 in version 3.2, I too have made 
 2. WordPress Power Tools Options Manager 
 
 == Changelog ==
+
+= 1.1 =
+ * Minor bugfix with menu name
+
 = 1.0 =
  * Added menu item linking to live site when hiding toolbar in admin section.  
  * Added front-end interface to manage/delete options set in your options database table.
