@@ -4,7 +4,7 @@ Donate link: http://matgargano.com/donate
 Tags: powertools, power tools, toolbar, tool bar, adminbar, admin bar
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 1.1
+Stable tag: 1.0
 
 A backend-centric suite of tools designed to handle the non-sense grunt work on your WordPress installs.
 
