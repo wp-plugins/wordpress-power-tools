@@ -7,7 +7,7 @@ class wpptAdmin extends wppt {
     $this->_formElementsInput["toolbarOptions"][]=array('index'=>1,'type'=>'checkbox','label'=>'Hide the Toolbar in Public Site (for all logged in users)','id'=>'hideBar','name'=>'hideBar','optionName'=>'hideBar');
     $this->_formElementsInput["toolbarOptions"][]=array('index'=>2,'type'=>'checkbox','label'=>'Hide the Toolbar in Administartion Area (for all logged in users)','id'=>'hideAdminBar','name'=>'hideAdminBar','optionName'=>'hideAdminBar');
     add_action('admin_menu', array(&$this, 'wpptAdminMenu'));
-    add_action('admin_head', array(&$this, 'wpptAdminHeaderFiles'));
+    add_action('admin_enqueue_scripts', array(&$this, 'wpptAdminHeaderFiles'));
     }
   function wpptAdminHeaderFiles(){
     wp_register_style( 'wpptAdminCss', plugin_dir_url(__FILE__)."css/wppt-admin.css", false, '1.0.0' );
