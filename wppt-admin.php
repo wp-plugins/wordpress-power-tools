@@ -89,7 +89,7 @@ class wpptAdmin extends wppt {
         </div>
         <input class="button-primary" type="submit" value="Save" />
       </form>
-    </div><?
+    </div><?php
     }
   function wordpressOptions(){
     $optionToDelete="";

@@ -4,7 +4,7 @@ Donate link: http://matgargano.com/donate
 Tags: powertools, power tools, toolbar, tool bar, adminbar, admin bar
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 1.2
+Stable tag: 1.3
 
 A developer-centric suite of tools designed to handle the non-sense grunt work on your WordPress installs.
 
@@ -45,6 +45,8 @@ Feel free to create a thread in the WordPress.org bbPress forum with the tag "wo
 
 == Changelog ==
 
+= 1.3 =
+* Fixed minor bug causing plugin to not properly function in PHP environments that do not support short tags
 
 = 1.2 =
 * Fixed minor bug causing plugin to not properly function for WP versions < 3.3
@@ -72,6 +74,9 @@ Feel free to create a thread in the WordPress.org bbPress forum with the tag "wo
 * First version released.
 
 == Upgrade Notice ==
+
+= 1.3 =
+* Fixed minor bug causing plugin to not properly function in PHP environments that do not support short tags
 
 = 1.2 =
 * Works in all versions of WordPress 3.2+
