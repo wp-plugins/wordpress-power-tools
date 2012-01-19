@@ -48,12 +48,12 @@ class wppt {
       else {$key=$this->options['menuLocation'];}
       	$name=get_bloginfo("name");
     	if(strlen($name)<1){$name="View Site";}
-      add_menu_page('View Site',$name,'read',        'admin.php?goto=view_page',"","",$key);    
+      add_menu_page('View Site',$name,'read', 'admin.php?goto=view_page',"","",$key);    
       }
   
   function wppt_redirect_from_admin_menu($value) {
     global $pagenow;
-    if ($pagenow=='themes.php' && !empty($_GET['goto'])) {
+    if ($pagenow=='admin.php' && !empty($_GET['goto'])) {
       switch ($_GET['goto']) {
         case 'view_page':
           wp_redirect(site_url());

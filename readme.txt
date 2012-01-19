@@ -4,7 +4,7 @@ Donate link: http://matgargano.com/donate
 Tags: powertools, power tools, toolbar, tool bar, adminbar, admin bar
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 1.3
+Stable tag: 1.3.1
 
 A developer-centric suite of tools designed to handle the non-sense grunt work on your WordPress installs.
 
@@ -44,6 +44,9 @@ Feel free to create a thread in the WordPress.org bbPress forum with the tag "wo
 2. WordPress Power Tools Options Manager 
 
 == Changelog ==
+
+= 1.3.1 =
+* Minor bugfix causing link activated when hiding toolbar in admin to not function on all installations. 
 
 = 1.3 =
 * Fixed minor bug causing plugin to not properly function in PHP environments that do not support short tags
