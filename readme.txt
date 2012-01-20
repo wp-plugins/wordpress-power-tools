@@ -3,7 +3,7 @@ Contributors: matstars
 Donate link: http://matgargano.com/donate
 Tags: powertools, power tools, toolbar, tool bar, adminbar, admin bar
 Requires at least: 3.0
-Tested up to: 3.3
+Tested up to: 3.3.1
 Stable tag: 1.3.2
 
 A developer-centric suite of tools designed to handle the non-sense grunt work on your WordPress installs.
@@ -19,7 +19,6 @@ It's current feature set includes:
  * An option to remove the WordPress Toolbar when logged in to the back-end section for your WordPress install. 
  * When hiding the toolbar in the back-end, a menu item linking to live site is added to admin menu.  
  * A way to view and manage your options set in your wp_options (or PREFIX_options) table.
- * Completely rewritten object oriented and optimized code.  
 
 == Installation ==
 1. If installing manually, unzip and upload resulting directory to the `/wp-content/plugins/` directory
