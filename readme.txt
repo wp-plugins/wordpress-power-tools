@@ -3,7 +3,7 @@ Contributors: matstars
 Donate link: http://matgargano.com/donate
 Tags: powertools, power tools, toolbar, tool bar, adminbar, admin bar
 Requires at least: 3.0
-Tested up to: 3.3
+Tested up to: 3.3.1
 Stable tag: 1.3.2
 
 A developer-centric suite of tools designed to handle the non-sense grunt work on your WordPress installs.
