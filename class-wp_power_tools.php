@@ -3,15 +3,24 @@ class WP_Power_Tools {
   var $short_name;
   var $plugin_prefix;     
   function __construct(){   
-    $this->plugin_name              =   "WordPress Power Tools";
-    $this->short_name               =   "WP Power Tools";
-    $this->plugin_prefix            =   "WPPT";
-    $this->admin_base               =   get_admin_url();
-    $this->plugin_settings_url      =   'admin.php?page='.$this->plugin_prefix;
-    $this->plugin_full_settings_url =   $this->adminBase.$this->plugin_settings_url;
-    $this->plugin_url               =   plugin_dir_url(__FILE__);
-    $this->options                  =   get_option($this->prefix."_options");
+    $this->plugin_name                =   "WordPress Power Tools";
+    $this->short_name                 =   "WP Power Tools";
+    $this->prefix                     =   "WPPT";
+    $this->admin_base                 =   get_admin_url();
+    $this->plugin_settings_url        =   'admin.php?page='.$this->prefix;
+    $this->plugin_full_settings_url   =   $this->adminBase.$this->plugin_settings_url;
+    $this->plugin_url                 =   plugin_dir_url(__FILE__);
+    $this->options                    =   get_option($this->prefix."_options");
+
     
+    
+    if ( $this->options [ 'google-tracking' ] ==  1){
+      add_action('wp_footer', 'add_google_analytics');
+    }
+    
+    
+
+
     if ( $this->options [ 'hide-bar' ] ==  1){
       add_filter( 'show_admin_bar' ,  array(&$this,'remove_that_darn_bar'));
     }
@@ -40,7 +49,7 @@ class WP_Power_Tools {
   }
   
   function WPPT_create_home_menu_item() {
-    $WPPT_options=get_option("WPPT_options");
+    $WPPT_options=get_option($this->prefix."_options");
     if( ! is_numeric ( $this->options [ 'menu-location' ] ) ) {
       foreach ( $GLOBALS [ 'menu' ] as $key => $val ) {
     		$keys[] = $key;
@@ -83,5 +92,25 @@ class WP_Power_Tools {
       exit;
     }
   }
+  
+  function WPPT_add_google_analytics {
+  $WPPT_options=get_option($this->prefix."_options");
+  ?>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '<?php echo $WPPT_options['google-tracking-profile']; ?>']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+  <?php
+  }
+
 
 }

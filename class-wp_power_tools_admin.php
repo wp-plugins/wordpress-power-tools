@@ -56,9 +56,9 @@ class WP_Power_Tools_Admin extends WP_Power_Tools {
   }
   
   function WPPT_admin_menu() {
-    add_menu_page( $this->plugin_name.' Options', $this->short_name, 'manage_options', $this->plugin_prefix."_general_options", array( &$this, 'general_options' ), $this->plugin_url."images/wppt_heading_icon.png" );
-    add_submenu_page( $this->plugin_prefix."_general_options", $this->plugin_name.' Administration', "General Options", "manage_options", $this->plugin_prefix."_general_options", array( &$this, 'general_options' ) );
-    add_submenu_page( $this->plugin_prefix."_general_options", $this->plugin_name.' Other Option', "Options Manager", "manage_options", $this->plugin_prefix."_wordpress_options", array( &$this, 'wordpress_options' ) );
+    add_menu_page( $this->plugin_name.' Options', $this->short_name, 'manage_options', $this->prefix."_general_options", array( &$this, 'general_options' ), $this->plugin_url."images/wppt_heading_icon.png" );
+    add_submenu_page( $this->prefix."_general_options", $this->plugin_name.' Administration', "General Options", "manage_options", $this->prefix."_general_options", array( &$this, 'general_options' ) );
+    add_submenu_page( $this->prefix."_general_options", $this->plugin_name.' Other Option', "Options Manager", "manage_options", $this->prefix."_wordpress_options", array( &$this, 'wordpress_options' ) );
   }
     
   function general_options(){
@@ -66,11 +66,11 @@ class WP_Power_Tools_Admin extends WP_Power_Tools {
     $this->error_message    =   "";
     $this->admin_screen     =   "general_options";
     $this->title            =   "WordPress Power Tools - General Options";
-    $this->current_nonce    =   $this->plugin_prefix.$this->admin_screen."nonce";
+    $this->current_nonce    =   $this->prefix.$this->admin_screen."nonce";
     $this->success_message  =   trim( $this->success_message  );
     $this->error_message    =   trim( $this->error_message );
     if ( 'POST' == $_SERVER['REQUEST_METHOD'] && check_admin_referer( $this->current_nonce, '_wpnonce' ) ) {
-      $this_options = get_option( $this->plugin_prefix."_options" );  
+      $this_options = get_option( $this->prefix."_options" );  
       foreach( $this->_form_elements_input[$this->admin_screen] as $element ) {
         switch( $element['type'] ) {
           case checkbox:
@@ -88,10 +88,10 @@ class WP_Power_Tools_Admin extends WP_Power_Tools {
           break;          
         }
       }
-      update_option( $this->plugin_prefix."_options", $this_options );
+      update_option( $this->prefix."_options", $this_options );
       $this->success_message = "Successfully updated options!";      
     }
-    $this_options = get_option( $this->plugin_prefix."_options" );  
+    $this_options = get_option( $this->prefix."_options" );  
     foreach( $this->_form_elements_input[$this->admin_screen] as $element ){
       switch( $element['type'] ) {
         case checkbox:
@@ -160,7 +160,7 @@ class WP_Power_Tools_Admin extends WP_Power_Tools {
     $this->error_message                    =   "";
     $this->admin_screen                     =   "wordpress_options";
     $this->title                            =   "WordPress Power Tools - WP Options Manager";
-    $this->current_nonce                    =   $this->plugin_prefix.$this->admin_screen."nonce";
+    $this->current_nonce                    =   $this->prefix.$this->admin_screen."nonce";
     $this->success_message                  =   trim( $this->success_message );
     if ( 'GET' == $_SERVER['REQUEST_METHOD'] && strlen( $_GET['option_to_delete'] )>0 ) {
       check_admin_referer( 'delete_option_nonce' );
