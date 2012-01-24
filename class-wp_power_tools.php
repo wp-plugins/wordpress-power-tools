@@ -12,11 +12,11 @@ class WP_Power_Tools {
     $this->plugin_url               =   plugin_dir_url(__FILE__);
     $this->options                  =   get_option($this->prefix."_options");
     
-    if ( $this->options [ 'hide_bar' ] ==  1){
+    if ( $this->options [ 'hide-bar' ] ==  1){
       add_filter( 'show_admin_bar' ,  array(&$this,'remove_that_darn_bar'));
     }
     
-    if($this->options [ 'hide_admin_bar' ] == 1 ) {
+    if($this->options [ 'hide-admin-bar' ] == 1 ) {
       add_action('admin_menu', array(&$this, 'WPPT_create_home_menu_item'));
       add_filter('admin_head',array(&$this, 'remove_that_darn_bar_admin'));
       add_filter('admin_head',array(&$this, 'remove_that_darn_bar_admin_extra_css'));
@@ -41,7 +41,7 @@ class WP_Power_Tools {
   
   function WPPT_create_home_menu_item() {
     $WPPT_options=get_option("WPPT_options");
-    if( ! is_numeric ( $this->options [ 'menu_location' ] ) ) {
+    if( ! is_numeric ( $this->options [ 'menu-location' ] ) ) {
       foreach ( $GLOBALS [ 'menu' ] as $key => $val ) {
     		$keys[] = $key;
     	}
@@ -60,10 +60,10 @@ class WP_Power_Tools {
           }
     		} while ( $found == 0 );
     	}		
-    	$this->options[ 'menu_location' ]=$key;	
+    	$this->options[ 'menu-location' ]=$key;	
     	update_option( $this->prefix."_options",$this->options);
     }
-      else {$key=$this->options[ 'menu_location' ];}
+      else {$key=$this->options[ 'menu-location' ];}
       	$name=get_bloginfo("name");
     	if(strlen($name)<1){$name="View Site";}
       add_menu_page('View Site',$name,'read', 'admin.php?goto=view_page',"","",$key);    

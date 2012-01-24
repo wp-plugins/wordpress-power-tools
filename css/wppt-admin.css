@@ -47,10 +47,24 @@
 	padding-top:30px;
 	}
 #WPPT-admin input[type=checkbox] {
-	float:left;width:200px;
+	float:left;
 	}
+
+#WPPT-admin label {
+  float:left;
+  width:400px;
+  margin-bottom:10px;
+  }
+
+#WPPT-admin input[type=text],
+#WPPT-admin textarea {
+  border:1px solid #999;
+  float:left;
+  
+  }
+  
 #WPPT-admin {
-	padding-top:30px;
+	padding-top:30px
 	}
 #WPPT-wordpress-options,
 #WPPT-wordpress-options table {

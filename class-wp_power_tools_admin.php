@@ -6,7 +6,7 @@ class WP_Power_Tools_Admin extends WP_Power_Tools {
   
   function __construct(){
     parent::__construct();
-    $this->_form_elements_input["toolbar_options"][]=array( 
+    $this->_form_elements_input["general_options"][]=array( 
       'index'       =>    1, 
       'type'        =>    'checkbox', 
       'label'       =>    'Hide the Toolbar in Public Site ( for all logged in users )', 
@@ -15,7 +15,7 @@ class WP_Power_Tools_Admin extends WP_Power_Tools {
       'optionName'  =>    'hide-bar'
     );
     
-    $this->_form_elements_input["toolbar_options"][]=array( 
+    $this->_form_elements_input["general_options"][]=array( 
       'index'       =>    2, 
       'type'        =>    'checkbox', 
       'label'       =>    'Hide the Toolbar in Administartion Area ( for all logged in users )', 
@@ -23,6 +23,27 @@ class WP_Power_Tools_Admin extends WP_Power_Tools {
       'name'        =>    'hide-admin-bar', 
       'optionName'  =>    'hide-admin-bar'
     );
+
+    $this->_form_elements_input["general_options"][]=array( 
+      'index'       =>    3, 
+      'type'        =>    'checkbox', 
+      'label'       =>    'Enable Google Analytics Tracking', 
+      'id'          =>    'google-tracking', 
+      'name'        =>    'google-tracking', 
+      'optionName'  =>    'google-tracking'
+    );
+    
+    $this->_form_elements_input["general_options"][]=array( 
+      'index'       =>    4, 
+      'type'        =>    'text', 
+      'label'       =>    'Google Analytics Profile ID (UA-XXXX-X)', 
+      'id'          =>    'google-tracking-profile', 
+      'name'        =>    'google-tracking-profile', 
+      'optionName'  =>    'google-tracking-profile'
+    );
+
+
+        
     
     add_action( 'admin_menu',             array( &$this, 'WPPT_admin_menu' ) );
     add_action( 'admin_enqueue_scripts',  array( &$this, 'WPPT_admin_header_files' ) );
@@ -35,15 +56,15 @@ class WP_Power_Tools_Admin extends WP_Power_Tools {
   }
   
   function WPPT_admin_menu() {
-    add_menu_page( $this->plugin_name.' Options', $this->short_name, 'manage_options', $this->plugin_prefix."_general_options", array( &$this, 'toolbar_options' ), $this->plugin_url."images/wppt_heading_icon.png" );
-    add_submenu_page( $this->plugin_prefix."_general_options", $this->plugin_name.' Administration', "General Options", "manage_options", $this->plugin_prefix."_general_options", array( &$this, 'toolbar_options' ) );
+    add_menu_page( $this->plugin_name.' Options', $this->short_name, 'manage_options', $this->plugin_prefix."_general_options", array( &$this, 'general_options' ), $this->plugin_url."images/wppt_heading_icon.png" );
+    add_submenu_page( $this->plugin_prefix."_general_options", $this->plugin_name.' Administration', "General Options", "manage_options", $this->plugin_prefix."_general_options", array( &$this, 'general_options' ) );
     add_submenu_page( $this->plugin_prefix."_general_options", $this->plugin_name.' Other Option', "Options Manager", "manage_options", $this->plugin_prefix."_wordpress_options", array( &$this, 'wordpress_options' ) );
   }
     
-  function toolbar_options(){
+  function general_options(){
     $this->success_message  =   "";
     $this->error_message    =   "";
-    $this->admin_screen     =   "toolbar_options";
+    $this->admin_screen     =   "general_options";
     $this->title            =   "WordPress Power Tools - General Options";
     $this->current_nonce    =   $this->plugin_prefix.$this->admin_screen."nonce";
     $this->success_message  =   trim( $this->success_message  );
@@ -59,6 +80,12 @@ class WP_Power_Tools_Admin extends WP_Power_Tools {
               $this_options[$element['id']] = 0;
             }
           break;
+          case text:
+            $this_options[$element['id']]=$_POST[$element['id']];
+          break;          
+          case textarea:
+            $this_options[$element['id']]=$_POST[$element['id']];
+          break;          
         }
       }
       update_option( $this->plugin_prefix."_options", $this_options );
@@ -77,15 +104,23 @@ class WP_Power_Tools_Admin extends WP_Power_Tools {
           }
           $this->_form_elements_output[$this->admin_screen][] = sprintf( $template, $element['id'], $element['label'], $element['name'], $element['id'], $checked );
         break;
+        case text:
+          $template = '<label for="%s">%s</label><input type="text" name="%s" id="%s" value="%s"><div class="clear-both"></div>';
+          $this->_form_elements_output[$this->admin_screen][] = sprintf( $template, $element['id'], $element['label'], $element['name'], $element['id'], $this_options[$element['optionName']] );
+        break;
+        case textarea:
+          $template = '<label for="%s">%s</label><textarea name="%s" id="%s">%s</textarea><div class="clear-both"></div>';
+          $this->_form_elements_output[$this->admin_screen][] = sprintf( $template, $element['id'], $element['label'], $element['name'], $element['id'], $this_options[$element['optionName']] );
+        break;        
       }
     }
     if ( $_GET['refresh'] == 1 ) {
       ?>
       <script type="text/javascript">
-        function refresh_WP_toolbar_options() {
+        function refresh_WP_general_options() {
           window.location = "<?php echo $this->get_raw_url()."?page=".$_GET['page']."&refresh=2"; ?>";
         }
-        setTimeout( "refresh_WP_toolbar_options()", 3000 );
+        setTimeout( "refresh_WP_general_options()", 3000 );
       </script>      
       <?php
     $this->success_message = $this->success_message.'<br /><br />Your options will propogate automatically in 3 seconds. If this does not happen or if you do not want to wait <a href="'.$url.'">click here</a>.';

@@ -36,9 +36,14 @@ $plugin_prefix="WPPT";
 function WPPT_deactivate_plugin() {
   global $plugin_prefix;
   delete_option($plugin_prefix."_active");
+  delete_option($plugin_prefix."_options");
 }
   
 function WPPT_activate_plugin() {
+  global $plugin_prefix;
+  delete_option($plugin_prefix."_active");
+  delete_option($plugin_prefix."_options");
+
   $wp_version = get_bloginfo('version');
   if ( version_compare( phpversion(), WPPT_MIN_PHP_VERSION, '<' ) ) {
     trigger_error('', E_USER_ERROR);
