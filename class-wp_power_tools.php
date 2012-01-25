@@ -93,7 +93,7 @@ class WP_Power_Tools {
     }
   }
   
-  function WPPT_add_google_analytics {
+  function WPPT_add_google_analytics() {
   $WPPT_options=get_option($this->prefix."_options");
   ?>
   <script type="text/javascript">
