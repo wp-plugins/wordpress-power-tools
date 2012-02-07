@@ -1,0 +1,153 @@
+#icon-wppt {
+		background: url("../images/wppt.png") no-repeat scroll 0 0 transparent;
+		}
+.clear-both {
+	clear:both;
+	}
+.bold {
+	font-weight:bold;
+	}
+.WPPT-notice {
+	border: 1px solid #888888;
+	margin-left: 120px;
+	margin-top: 30px;
+	margin-bottom:30px;
+	padding: 5px 10px;
+	width: 400px;
+	border-radius:5px;
+	background: #ffffff; 
+	background: #ffffff; 
+	background: -moz-linear-gradient(-45deg,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); 
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6));
+	background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); 
+	background: -o-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+	background: -ms-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); 
+	background: linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=1 ); 
+	min-height:100px;
+	}
+.WPPT-notice h2 {
+	font-size:18px;
+	text-align:center;
+	text-decoration:underline;
+	}
+	
+.WPPT-notice p {
+	font-size:13px;
+	color:#000;
+	}
+	
+.WPPT-notice ul li {
+	list-style-type:disc;
+	margin-left:30px;
+	padding-left:10px;
+	}
+	
+#WPPT-admin {
+	padding-top:30px;
+	}
+#WPPT-admin input[type=checkbox] {
+	float:left;
+	}
+
+#WPPT-admin label {
+  float:left;
+  width:400px;
+  margin-bottom:10px;
+  }
+
+#WPPT-admin input[type=text],
+#WPPT-admin textarea {
+  border:1px solid #999;
+  float:left;
+  
+  }
+  
+#WPPT-admin {
+	padding-top:30px
+	}
+#WPPT-wordpress-options,
+#WPPT-wordpress-options table {
+	font-size:11px;
+	margin-top:20px;
+	}
+#WPPT-wordpress-options .error {
+	margin-left:0;
+	margin-right:0;
+	float:none;
+	padding:10px 5px;
+	}
+#WPPT-wordpress-options div#key h2 {
+	font-size:12px;
+	margin:3px 0 3px 0;
+	padding:0;
+	text-align:center;
+	font-weight:bold;
+	text-shadow:none;
+	line-height:14px;
+	}
+#WPPT-wordpress-options div#key p {
+	font-size:12px;
+	margin:0 0 3px 0;
+	padding:0;
+	}
+#WPPT-wordpress-options div#key {
+	width:775px;
+	padding:0 8px 3px 8px;
+	margin:0 0 0 20px;
+	}
+#WPPT-wordpress-options div#key .wordpress-option-span {
+	background:#E8EDFF;
+	border:1px solid #ccc;
+	}
+#WPPT-wordpress-options div#key table tr td:first-child {
+	text-align:center;
+	text-decoration:underline;
+	}
+#WPPT-wordpress-options div#key table tr:first-child td {
+	text-align:center;
+	text-decoration:none;
+	}
+#WPPT-wordpress-options div#key {
+	font-size:16px;text-align:center;}
+#WPPT-wordpress-options div#key.floatLeft table#option-key tbody tr td#question-mark-td p {
+	font-size:16px;}
+#WPPT-wordpress-options div#key table#option-key  {
+	border-collapse:collapse;margin-top:0;padding-top:0;background:#fefefe;margin-left:auto;margin-right:auto;margin-bottom:10px;}
+#WPPT-wordpress-options table {
+	border-collapse:collapse;}
+#WPPT-wordpress-options table tr#WPPT-options-head td {
+	border-bottom:2px solid #000;border-right:1px solid #bbb;border-left:1px solid #bbb;}
+#WPPT-wordpress-options table tr td {
+	border-right:1px solid #ccc;border-bottom:1px solid #ccc;border-left:1px solid #ccc;padding-top:5px;}
+#WPPT-wordpress-options table tr td.opt-val, 
+#WPPT-wordpress-options table tr td.opt-name {
+	vertical-align:top;padding-left:5px;padding-right:5px;}
+#WPPT-wordpress-options table tr td.opt-val pre {
+	margin-top:0;}
+#WPPT-wordpress-options table tr.default-options td {
+	padding:3px;}
+#WPPT-wordpress-options table tr.default-options, 
+#WPPT-wordpress-options table tr.default-options td {
+	background:#E8EDFF;}
+#hide-default-options,
+#show-default-options {
+	margin-bottom:20px;margin-left:30px;}
+#show-default-options {
+	display:none;}
+#option-key td {
+	border-top:1px solid #ccc;}
+span.the-opt-name {
+	padding-left:10px;}
+td.google-it,
+td.delete-opt {
+	vertical-align:top;text-align:center;}
+td.google-it 
+font-size:16px;padding-left:5px;padding-right:5px;text-align:center;}
+td.google-it a 
+text-decoration:underline;} 
+td.google-it a:hover {
+	color:#FF0000;}
+tr#WPPT-options-head td {
+	font-weight:bold;white-space:nowrap;padding-left:5px;padding-right:5px;border-top:0px solid #000;}
+
