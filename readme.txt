@@ -4,7 +4,7 @@ Donate link: http://matgargano.com/donate
 Tags: powertools, power tools, toolbar, tool bar, adminbar, admin bar
 Requires at least: 3.2
 Tested up to: 3.3.1
-Stable tag: 1.4.2
+Stable tag: 1.4.3
 
 A developer-centric suite of tools designed to handle the non-sense grunt work on your WordPress installs.
 
@@ -45,11 +45,9 @@ Feel free to create a thread in the WordPress.org bbPress forum with the tag "wo
 
 == Changelog ==
 
-= 1.4.2 =
-* Some housekeeping (updated Readme, WordPress version, Screenshots)
-
-= 1.4.1 =
+= 1.4.3 =
 * Fixed bug with Google analytics tracking.
+* Some housekeeping (updated Readme, WordPress version, Screenshots)
 
 = 1.4 =
 * Added option to add Google analytics tracking.
