@@ -2,7 +2,7 @@
 Contributors: matstars
 Donate link: http://matgargano.com/donate
 Tags: powertools, power tools, toolbar, tool bar, adminbar, admin bar
-Requires at least: 3.0
+Requires at least: 3.2
 Tested up to: 3.3.1
 Stable tag: 1.4.1
 
@@ -15,6 +15,7 @@ A major drive behind this plugin to consolidate these menial tasks into a single
 
 It's current feature set includes:
 
+ * A simple way to add Google analytics to your site. 
  * An option to remove the WordPress Toolbar that appears for logged-in users who are viewing your live site. 
  * An option to remove the WordPress Toolbar when logged in to the back-end section for your WordPress install. 
  * When hiding the toolbar in the back-end, a menu item linking to live site is added to admin menu.  
@@ -44,14 +45,16 @@ Feel free to create a thread in the WordPress.org bbPress forum with the tag "wo
 
 == Changelog ==
 
-=1.4.1=
+= 1.4.2 =
+* Some housekeeping (updated Readme, WordPress version, Screenshots)
+
+= 1.4.1 =
 * Fixed bug with Google analytics tracking.
 
-=1.4=
+= 1.4 =
 * Added option to add Google analytics tracking.
 
-
-=1.3.2=
+= 1.3.2 =
 * Rewrote the code to meet WordPress coding standards
 
 = 1.3.1 =
