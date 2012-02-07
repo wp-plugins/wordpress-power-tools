@@ -15,7 +15,7 @@ class WP_Power_Tools {
     
     
     if ( $this->options [ 'google-tracking' ] ==  1){
-      add_action('wp_head', 'add_google_analytics');
+      add_action('wp_head', 'WPPT_add_google_analytics');
     }
     
     

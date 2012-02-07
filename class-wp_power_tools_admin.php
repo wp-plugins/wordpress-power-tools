@@ -142,6 +142,7 @@ class WP_Power_Tools_Admin extends WP_Power_Tools {
         <?php   echo wp_nonce_field( $this->current_nonce, "_wpnonce", true, true  ); ?>
         <div class="WPPT-notice"><h2>What's New?</h2>
         <ul>
+          <li>Added <a href="http://analytics.google.com">Google Analytics</a> support.</li>
           <li>Added menu item linking to live site when hiding admin bar.</li>  
           <li>Added front-end interface to manage/delete options set in your options database table.</li>
             
